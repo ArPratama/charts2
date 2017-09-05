@@ -14,3 +14,15 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/index', 'koneksicontroller@index');
+
+Route::get('/charts', function(){
+    return view('charts');
+});
+
+Route::get('/chartsv2', 'chartcontroller@getData');
